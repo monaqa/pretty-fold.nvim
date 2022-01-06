@@ -112,7 +112,7 @@ function M.show_preview()
    vim.cmd(string.format([[
       augroup fold_preview
          au!
-         au CursorMoved,BufLeave,ModeChanged <buffer> ++once lua _G.pretty_fold_preview[%d].close()
+         au CursorMoved,BufLeave <buffer> ++once lua _G.pretty_fold_preview[%d].close()
          au WinScrolled <buffer> lua _G.pretty_fold_preview[%d].scroll()
          au VimResized  <buffer> lua _G.pretty_fold_preview[%d].resize()
       augroup END

@@ -1,4 +1,5 @@
 local ffi = require("ffi")
+ffi.cdef'int curwin_col_off(void);'
 local wo = vim.wo
 local fn = vim.fn
 local api = vim.api
